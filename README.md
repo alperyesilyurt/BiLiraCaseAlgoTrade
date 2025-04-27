@@ -23,11 +23,12 @@
 ## 📁 Proje Yapısı
 
 ```bash
-algotrader/
+BiLiraCaseAlgoTrade/
 ├── app/
 │   ├── config.py
 │   ├── database.py
 │   ├── order_manager.py
+│   ├── logger.py
 │   ├── streamer.py
 │   └── strategy.py
 ├── Dockerfile
@@ -45,7 +46,7 @@ algotrader/
 
 ```bash
 git clone <repo-link>
-cd algotrader
+cd BiLiraCaseAlgoTrade
 ```
 
 2. **Docker imajlarını oluştur ve containerları başlat:**

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+.venv
+venv/
+env/
+.Python
+
+# Docker
+*.log
+docker-compose.override.yml
+**/docker-compose.override.yml
+
+# VS Code veya IDE dosyaları
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS gereksiz dosyaları
+.DS_Store
+
+# Grafana ve MongoDB runtime data
+grafana_data/
+data/db/
+
+# Eğer requirements.txt dosyasından türeyen bir virtual environment oluşturduysan
+pip-wheel-metadata/
+build/
+dist/
+*.egg-info/
+
+# Prometheus data (eğer volume klasörü açarsan)
+prometheus_data/

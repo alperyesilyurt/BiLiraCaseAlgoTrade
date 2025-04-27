@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  algotrader:
+    build: .
+    container_name: algotrader
+    ports:
+      - "8000:8000"
+    depends_on:
+      - prometheus
+      - mongodb
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"  
+    volumes:
+      - ./data/db:/data/db  
+  
+volumes:
+  grafana_data:

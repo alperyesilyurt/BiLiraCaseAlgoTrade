@@ -36,6 +36,7 @@
   - Prometheus (9090)
   - Grafana (3000)
   - MongoDB (27017 - sadece localhost erişimli olarak yapılandırılabilir ileride)
+  - Mongo Express (8081 - şimdilik localhost erişimli, ilerde authentication eklenebilir)
 
 - **Secure Docker Volumes:**  
   MongoDB ve Grafana verileri host makinaya volume olarak yazılmaktadır. Böylece container silinse bile veriler kaybolmaz.
@@ -47,6 +48,8 @@
   - FastAPI uygulamasına HTTPS (TLS) kurulumu yapılabilir.
   - MongoDB'ye kullanıcı/şifre authentication (SCRAM-SHA-1 veya SCRAM-SHA-256) eklenebilir.
   - Docker ağları `internal` yapılarak dış erişim iyice kısıtlanabilir.
+  - Mongo Express'e kullanıcı adı ve şifre authentication eklenebilir.
+
 
 ## Challenges Faced and Solutions
 
